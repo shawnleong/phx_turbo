@@ -15,6 +15,7 @@
         <nav>
           <ul>
             <li><%= link "Deadview CRUD", to: Routes.post_path(@conn, :index) %></li>
+            <li><%= link "Live1 (link)", to: Routes.live_path(@conn, TurboWeb.Live1) %></li>
             <%= if function_exported?(Routes, :live_dashboard_path, 2) do %>
               <li><%= link "LiveDashboard", to: Routes.live_dashboard_path(@conn, :home) %></li>
             <% end %>
