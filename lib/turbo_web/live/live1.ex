@@ -1,6 +1,8 @@
 defmodule TurboWeb.Live1 do
   use TurboWeb, :live_view
 
+  alias TurboWeb.LinkComponent
+
   def mount(_params, _session, socket) do
     {:ok, assign(socket, count: 0)}
   end
@@ -15,11 +17,7 @@ defmodule TurboWeb.Live1 do
     <button phx-click="inc">+</button>
     <button phx-click="dec">-</button>
 
-    <div>
-      <%= link "Live2 (link)", to: Routes.live_path(@socket, TurboWeb.Live2) %>
-      <%= live_redirect "Live2 (live_redirect)", to: Routes.live_path(@socket, TurboWeb.Live2) %>
-      <%= live_patch "Live2 (live_patch)", to: Routes.live_path(@socket, TurboWeb.Live2) %>
-    </div>
+    <LinkComponent.render socket={@socket} />
     """
   end
 

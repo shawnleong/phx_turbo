@@ -1,4 +1,4 @@
-defmodule TurboWeb.Live2 do
+defmodule TurboWeb.Live3 do
   use TurboWeb, :live_view
 
   alias TurboWeb.LinkComponent
@@ -17,8 +17,8 @@ defmodule TurboWeb.Live2 do
 
   def render(assigns) do
     ~H"""
-    <h1>LiveView 2</h1>
-    <label>This implements the counter via push_patch</label>
+    <h1>LiveView 3</h1>
+    <label>This implements the counter via push_patch but exists in separate live session</label>
 
     <h2><%= @count %></h2>
 

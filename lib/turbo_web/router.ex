@@ -19,8 +19,15 @@ defmodule TurboWeb.Router do
 
     get "/", PageController, :index
     resources "/posts", PostController
-    live "/live1", Live1
-    live "/live2", Live2
+
+    live_session :first do
+      live "/live1", Live1
+      live "/live2", Live2
+    end
+
+    live_session :second do
+      live "/live3", Live3
+    end
   end
 
   # Other scopes may use custom stacks.
