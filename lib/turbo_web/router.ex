@@ -20,6 +20,7 @@ defmodule TurboWeb.Router do
     get "/", PageController, :index
     resources "/posts", PostController
     live "/live1", Live1
+    live "/live2", Live2
   end
 
   # Other scopes may use custom stacks.
